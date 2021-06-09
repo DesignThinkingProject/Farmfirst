@@ -16,11 +16,12 @@ class MainActivity : AppCompatActivity() {
 
 
         btn2.setOnClickListener {
-            val i= Intent(this,Buysell::class.java)
+            val i= Intent(this,Labours::class.java)
         }
 
         btn3.setOnClickListener {
-            val i= Intent(this,Buysell::class.java)
+            val i= Intent(this,Govtschemes::class.java)
+            startActivity(i)
         }
     }
 }
