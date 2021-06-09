@@ -1,16 +1,25 @@
 package com.example.farmfirst
 
 import java.util.*
+import kotlin.random.Random
 
 
-class DataModel(id: Int) {
-    val title: String
-    val subTitle: String
-    val body: String
+data class DataModel(val title: String,val subTitle: String,val body: String) {
 
-    init {
-        title = String.format(Locale.ENGLISH, "Title %d Goes Here", id)
-        subTitle = String.format(Locale.ENGLISH, "Sub title %d goes here", id)
-        body = String.format(Locale.ENGLISH, "Body of this particular scheme, id")
+    companion object {
+        fun genDataModels(n: Int): ArrayList<DataModel> {
+            val DataModelArray = ArrayList<DataModel>(n)
+
+            for (i in 1..n) {
+                var dataModeldetail = DataModel(
+                    "Title Goes here",
+                    "Subtitle goes here",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt quam nibh, sed eleifend justo interdum sit amet. Donec est nibh, euismod eu metus cursus, luctus pulvinar magna. Curabitur blandit ex vitae erat lobortis, rutrum sollicitudin nunc auctor. Aenean dapibus urna quis lacinia mollis.\"\n"
+                )
+                DataModelArray.add(dataModeldetail)
+            }
+            return DataModelArray
+        }
     }
+
 }

@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">FarmFirst</string>
     <string name="category">Card Category</string>
-    <string name="title">Card Tiltle</string>
+    <string name="title">Card Title</string>
     <string name="govt">Government Schemes and Data</string>
     <string name="action_1">Visit website for more info</string>
-    <string name="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt quam nibh, sed eleifend justo interdum sit amet. Donec est nibh, euismod eu metus cursus, luctus pulvinar magna. Curabitur blandit ex vitae erat lobortis, rutrum sollicitudin nunc auctor. Aenean dapibus urna quis lacinia mollis. </string>
 </resources>
