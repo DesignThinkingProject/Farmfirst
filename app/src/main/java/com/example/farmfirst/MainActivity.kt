@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn1.setOnClickListener {
-            val i= Intent(this,Buysell::class.java)
+            val i= Intent(this,Buy_sell_login1::class.java)
             startActivity(i)
         }
 
