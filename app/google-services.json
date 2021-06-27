@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "151730834437",
+    "firebase_url": "https://farmfirst-ef253-default-rtdb.firebaseio.com",
+    "project_id": "farmfirst-ef253",
+    "storage_bucket": "farmfirst-ef253.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151730834437:android:fae19c3ff9199f9550206c",
+        "android_client_info": {
+          "package_name": "com.example.farmfirst"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151730834437-0qkbot4pcrhan4ihri6m4qc1iclne5v5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMIeMb58ephOMhLHPqmNOjBux6Ph046Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151730834437-0qkbot4pcrhan4ihri6m4qc1iclne5v5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
