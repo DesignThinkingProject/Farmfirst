@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@drawable/dtl_farm_pic1"
-    android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".BuySellLogin">
+    android:layout_height="match_parent"
+    tools:context=".BuySellSignUp">
 
     <TextView
         android:id="@+id/titleLabeltv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="LOGIN"
+        android:text="SIGNUP"
         style="@style/TextAppearance.MaterialComponents.Headline4"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Login to your account"
+        android:text="Create a new account"
         android:layout_below="@id/titleLabeltv"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
@@ -38,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/usernameEt"
-
             android:hint="Username"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -63,38 +61,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/signUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="SIGN UP"
         android:layout_marginTop="10dp"
         android:layout_below="@id/passwordTil"/>
 
-
-
-
-
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/signInbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginBtn"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="16dp"
-        android:visibility="visible" />
-
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="5dp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/noAccountTv"
-        android:text="Dont have account? SignIn"
-        android:textStyle="bold"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
 
 </RelativeLayout>
