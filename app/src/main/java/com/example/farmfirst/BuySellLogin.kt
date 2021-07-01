@@ -97,8 +97,9 @@ class BuySellLogin : AppCompatActivity() {
             Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
             firebaseAuthWithGoogle(account.idToken!!)
         } catch (e: ApiException) {
+            
             Log.w(TAG, "signInResult:failed code=" + e.statusCode)
-
+            Log.d(TAG, "handleSignInResult: $e")
         }
     }
 
@@ -109,7 +110,7 @@ class BuySellLogin : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
-                    val user = auth.currentUser
+                    val user = firebaseAuth.currentUser
                     if (user != null) {
                         updateUI(user)
                     }

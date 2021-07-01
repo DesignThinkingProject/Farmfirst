@@ -28,6 +28,7 @@ class BuySellSignUp : AppCompatActivity() {
         auth = Firebase.auth
 
         signUpBtn.setOnClickListener {
+            Log.d(TAG, "onCreate: signupbtnclicked")
             email = usernameEt.text.toString().trim()
             password = passwordEt.text.toString().trim()
             createAccount(email, password)
@@ -36,6 +37,7 @@ class BuySellSignUp : AppCompatActivity() {
     }
     private fun createAccount(email: String, password: String) {
         // [START create_user_with_email]
+        Log.d(TAG, "createAccount: $email $password")
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -46,6 +48,7 @@ class BuySellSignUp : AppCompatActivity() {
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Log.d(TAG, "createAccount: failed")
                     Toast.makeText(baseContext, "Authentication failed.",
                         Toast.LENGTH_SHORT).show()
                     updateUI(null)
