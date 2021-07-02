@@ -9,10 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmFirst">
-        <activity android:name=".BuySellSignUp">
-
-        </activity>
-        <activity android:name=".BuySellLogin" >
+        <activity android:name=".Makeprofile"></activity>
+        <activity android:name=".BuySellSignUp"></activity>
+        <activity android:name=".BuySellLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +21,7 @@
         <activity android:name=".Govtschemes" />
         <activity android:name=".Labours" />
         <activity android:name=".Buysell" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

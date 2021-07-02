@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Makeprofile">
+
+
+    <ImageView
+        android:id="@+id/displayphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:layout_below="@+id/displayphoto"
+        android:id="@+id/Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Please enter your details"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/NameTil"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/Details"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NameEt"
+            android:hint="ENTER YOUR NAME"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PhoneNumberTil"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/NameTil"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PhoneNumberEt"
+            android:hint="Contact Number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
