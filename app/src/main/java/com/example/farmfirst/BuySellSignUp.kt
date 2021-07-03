@@ -51,20 +51,18 @@ class BuySellSignUp : AppCompatActivity() {
                     Log.d(TAG, "createAccount: failed")
                     Toast.makeText(baseContext, "Authentication failed.",
                         Toast.LENGTH_SHORT).show()
-                    updateUI(null)
                 }
             }
         // [END create_user_with_email]
     }
 
     private fun updateUI(user: FirebaseUser?) {
-
+        startActivity(Intent(this, Makeprofile::class.java))
     }
 
 //    private fun reload() {
 //
 //    }
-
     companion object {
         private const val TAG = "EmailPassword"
     }

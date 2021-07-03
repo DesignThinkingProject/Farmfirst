@@ -14,7 +14,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="25dp"
         android:layout_centerHorizontal="true"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@mipmap/ic_launcher_round" />
+
 
     <TextView
         android:layout_below="@+id/displayphoto"
@@ -58,5 +59,34 @@
             android:hint="Contact Number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LocationTil"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/PhoneNumberTil"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LocationEt"
+            android:hint="Location"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/registerme"
+        android:layout_below="@id/LocationTil"
+        android:text="REGISTER ME"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"/>
+
 
 </RelativeLayout>

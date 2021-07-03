@@ -71,10 +71,6 @@
         android:layout_below="@id/passwordTil"/>
 
 
-
-
-
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInbutton"
         android:layout_width="wrap_content"
