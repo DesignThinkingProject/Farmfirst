@@ -9,10 +9,14 @@
     android:background="@drawable/plant_back">
 
     <TextView
+        android:id="@+id/detailsid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nametv"
-        />
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextAppearance.MaterialComponents.Headline6"/>
 
     <Button
         android:id="@+id/btn1"
