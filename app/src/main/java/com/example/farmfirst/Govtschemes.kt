@@ -31,7 +31,7 @@ class Govtschemes : AppCompatActivity(), SchemeItemClicked {
     }
 
     private fun fetchData() {
-        val url = "https://newsapi.org/v2/everything?q=agriculture+farmer+india+scheme&apiKey=c2703a6484d640bfa98398c825826061"
+        val url = "https://newsapi.org/v2/everything?q=\"agriculture\"+\"farmer\"+\"india\"+\"scheme\"+\"welfare\"-UPSC&apiKey=c2703a6484d640bfa98398c825826061"
         val jsonObjectRequest = object: JsonObjectRequest(
             Request.Method.GET,
             url,
