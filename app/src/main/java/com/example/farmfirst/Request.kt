@@ -26,7 +26,7 @@ class Request : AppCompatActivity() {
 
     private fun saveCropToFirebaseDatabase() {
         val uid = FirebaseAuth.getInstance().uid
-        val ref1 = FirebaseDatabase.getInstance().reference
+        val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/$uid")
 
         val name = NameEt.text.toString()
         val location = LocationEt.text.toString()
