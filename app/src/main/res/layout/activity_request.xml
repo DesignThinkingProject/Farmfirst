@@ -10,7 +10,7 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter crop name"
             android:paddingStart="8dp"
+            android:id="@+id/NameEt"
             android:inputType="textCapWords"
             android:paddingEnd="8dp"
             android:textSize="18sp" />
@@ -84,6 +85,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter your location"
             android:paddingStart="8dp"
+            android:id="@+id/LocationEt"
             android:inputType="textCapWords"
             android:paddingEnd="8dp"
             android:textSize="18sp" />
@@ -114,6 +116,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter crop weight"
             android:paddingStart="8dp"
+            android:id="@+id/cropwtEt"
             android:inputType="textCapWords"
             android:paddingEnd="8dp"
             android:textSize="18sp" />
@@ -146,6 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your amount"
+            android:id="@+id/priceamountEt"
             android:paddingStart="8dp"
             android:inputType="textCapWords"
             android:paddingEnd="8dp"
@@ -177,6 +181,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:hint="Add a note for buyer"
+            android:id="@+id/noteEt"
             android:lines="1"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
@@ -207,12 +212,12 @@
             android:layout_height="wrap_content"
             android:hint="Set Date"
             android:clickable="true"
-            android:id="@+id/dateEdt"
+            android:id="@+id/dateEt"
             android:cursorVisible="false"
             android:drawablePadding="8dp"
             android:drawableEnd="@drawable/ic_date_range_black_24dp"
             android:drawableTint="@color/colorAccent"
-            android:focusable="false"
+            android:focusable="true"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:textSize="18sp" />

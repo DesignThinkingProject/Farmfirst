@@ -1,7 +1,7 @@
 package com.example.farmfirst
 
+import android.text.Editable
 import java.util.*
-import kotlin.random.Random
 
 
 data class DataModel(val title: String,val subTitle: String,val body: String) {

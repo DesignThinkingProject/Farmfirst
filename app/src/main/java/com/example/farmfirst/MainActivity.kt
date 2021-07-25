@@ -16,11 +16,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dbRef : DatabaseReference
     val uid = FirebaseAuth.getInstance().uid
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        readData();
+        readData()
 
         btn1.setOnClickListener {
             val i= Intent(this, Buysell::class.java)

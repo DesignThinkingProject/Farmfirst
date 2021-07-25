@@ -83,6 +83,8 @@
         app:layout_constraintVertical_bias="0.832" />
 
     <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:id="@+id/usernameEt"
         android:layout_width="325dp"
         android:layout_height="47dp"
@@ -93,6 +95,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:id="@+id/passwordEt"
         android:layout_width="315dp"
         android:layout_height="39dp"
