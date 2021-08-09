@@ -11,11 +11,12 @@ import kotlinx.android.synthetic.main.activity_request.*
 import kotlinx.android.synthetic.main.activity_request.LocationEt
 import kotlinx.android.synthetic.main.activity_request.NameEt
 
+private const val TAGLOG = "SignTag"
+
 class Request : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request)
-
 
         saveBtn.setOnClickListener {
             saveCropToFirebaseDatabase()
@@ -28,15 +29,15 @@ class Request : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/$uid")
 
-        val name = NameEt.text.toString()
-        val location = LocationEt.text.toString()
-        val weight = cropwtEt.text.toString().toInt()
-        val amount = priceamountEt.text.toString().toInt()
-        val note = noteEt.text.toString()
-        val date = dateEt.text
-
-        val cropdetail = Cropdetails(name, location, weight, amount, note, date)
-        Log.d("TAGok", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
+        val cropdetail = Cropdetails(
+                NameEt.text.toString(),
+                LocationEt.text.toString(),
+                cropwtEt.text.toString().toInt(),
+                priceamountEt.text.toString().toInt(),
+                noteEt.text.toString(),
+                dateEt.text
+            )
+        //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         ref1.setValue(cropdetail)
     }
 
