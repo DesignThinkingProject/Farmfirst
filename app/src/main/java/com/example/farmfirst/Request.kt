@@ -27,7 +27,7 @@ class Request : AppCompatActivity() {
 
     private fun saveCropToFirebaseDatabase() {
         val uid = FirebaseAuth.getInstance().uid
-        val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/$uid")
+        val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/")
 
         val cropdetail = Cropdetails(
                 NameEt.text.toString(),
@@ -35,11 +35,11 @@ class Request : AppCompatActivity() {
                 cropwtEt.text.toString().toInt(),
                 priceamountEt.text.toString().toInt(),
                 noteEt.text.toString(),
-                dateEt.text
+                dateEt.text.toString()
             )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
-        ref1.setValue(cropdetail)
+        ref1.child("$uid").setValue(cropdetail)
     }
 
 }
-class Cropdetails(val name1: String, val location: String, val weight1: Int, val amount: Int, val note1: String, val date: Editable?)
+class Cropdetails(val name1: String, val location: String, val weight1: Int, val amount: Int, val note1: String, val date: String)
