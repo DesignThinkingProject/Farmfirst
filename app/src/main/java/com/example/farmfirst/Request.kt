@@ -3,24 +3,25 @@ package com.example.farmfirst
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
+import com.example.farmfirst.databinding.ActivityRequestBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_makeprofile.*
-import kotlinx.android.synthetic.main.activity_request.*
-import kotlinx.android.synthetic.main.activity_request.LocationEt
-import kotlinx.android.synthetic.main.activity_request.NameEt
+
 
 private const val TAGLOG = "SignTag"
 
 
+
 class Request : AppCompatActivity() {
+
+    private lateinit var binding: ActivityRequestBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_request)
+        binding = ActivityRequestBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        saveBtn.setOnClickListener {
+        binding.saveBtn.setOnClickListener {
             saveCropToFirebaseDatabase()
             val i= Intent(this, Buysell::class.java)
             startActivity(i)
@@ -34,12 +35,12 @@ class Request : AppCompatActivity() {
         val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/")
 
         val cropdetail = Cropdetails(
-                NameEt.text.toString(),
-                LocationEt.text.toString(),
-                cropwtEt.text.toString().toInt(),
-                priceamountEt.text.toString().toInt(),
-                noteEt.text.toString(),
-                dateEt.text.toString()
+            binding.NameEt.text.toString(),
+            binding.LocationEt.text.toString(),
+            binding.cropwtEt.text.toString().toInt(),
+            binding.priceamountEt.text.toString().toInt(),
+                binding.noteEt.text.toString(),
+                binding.dateEt.text.toString()
             )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         ref1.child("$uid").setValue(cropdetail)
