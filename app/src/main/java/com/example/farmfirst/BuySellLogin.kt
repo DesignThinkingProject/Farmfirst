@@ -1,14 +1,10 @@
 package com.example.farmfirst
 
-import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import android.util.Log
-import android.util.Patterns
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.farmfirst.databinding.ActivityBuysellloginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -17,16 +13,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_buyselllogin.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
 
 class BuySellLogin : AppCompatActivity() {
 
@@ -37,11 +26,13 @@ class BuySellLogin : AppCompatActivity() {
     private var email = ""
     private var password = ""
     private lateinit var googleSignInClient : GoogleSignInClient
+    private lateinit var binding: ActivityBuysellloginBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_buyselllogin)
+        binding = ActivityBuysellloginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
         //firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth = Firebase.auth
@@ -55,19 +46,19 @@ class BuySellLogin : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
 
-        noAccountTv.setOnClickListener {
+        binding.noAccountTv.setOnClickListener {
             Log.d(TAG, "googlesign: ok")
             val i= Intent(this, BuySellSignUp::class.java)
             startActivity(i)
         }
 
-        loginBtn.setOnClickListener{
-            email = usernameEt.text.toString().trim()
-            password = passwordEt.text.toString().trim()
+        binding.loginBtn.setOnClickListener{
+            email = binding.usernameEt.text.toString().trim()
+            password = binding.passwordEt.text.toString().trim()
             signIn(email,password)
         }
 
-        signInbutton.setOnClickListener {
+        binding.signInbutton.setOnClickListener {
             googlesign()
         }
 

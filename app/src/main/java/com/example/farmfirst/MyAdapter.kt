@@ -7,12 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.list_item.view.*
+import com.example.farmfirst.databinding.ListItemBinding
+
 
 
 class MyAdapter( val listener: SchemeItemClicked) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     // View holder class whose objects represent each list item
 
+    private lateinit var binding: ListItemBinding
     val dataModelList: ArrayList<News> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -22,6 +24,7 @@ class MyAdapter( val listener: SchemeItemClicked) : RecyclerView.Adapter<MyAdapt
             parent,
             false
         )
+
         val viewHolder = MyViewHolder(itemView)
         itemView.setOnClickListener{
             listener.onItemClicked(dataModelList[viewHolder.adapterPosition])
@@ -32,9 +35,9 @@ class MyAdapter( val listener: SchemeItemClicked) : RecyclerView.Adapter<MyAdapt
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         // Bind data for the item at position
-        holder.itemView.card_title.text =  dataModelList[position].title
+       holder.cardtitle.text =  dataModelList[position].title
         //holder.itemView.card_subtitle.text =  dataModelList[position].author
-        holder.itemView.card_body.text =  dataModelList[position].content
+        holder.cardbody.text = dataModelList[position].content
         Glide.with(holder.itemView.context).load(dataModelList[position].imageUrl).into(holder.image)
 
     }
@@ -53,7 +56,9 @@ class MyAdapter( val listener: SchemeItemClicked) : RecyclerView.Adapter<MyAdapt
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //val titleView: TextView = itemView.findViewById(R.id.title)
         val image: ImageView = itemView.findViewById(R.id.image)
-        //val content: TextView = itemView.findViewById(R.id.content)
+        val cardtitle : TextView = itemView.findViewById(R.id.card_title)
+        val cardbody : TextView = itemView.findViewById(R.id.card_body)
+    //val content: TextView = itemView.findViewById(R.id.content)
     }
 }
 

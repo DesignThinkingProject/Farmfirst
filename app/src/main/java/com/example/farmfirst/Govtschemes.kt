@@ -1,33 +1,33 @@
 package com.example.farmfirst
 
-import android.os.Bundle
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_govtschemes.*
-import java.util.ArrayList
-import org.json.JSONObject
-import com.android.volley.toolbox.JsonObjectRequest
-import android.content.Context
 import android.net.Uri
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
-import com.android.volley.toolbox.Volley
+import com.android.volley.toolbox.JsonObjectRequest
+import com.example.farmfirst.databinding.ActivityGovtschemesBinding
+import java.util.*
+import kotlin.collections.HashMap
+import kotlin.collections.MutableMap
+import kotlin.collections.set
 
 class Govtschemes : AppCompatActivity(), SchemeItemClicked {
 
     private lateinit var myadapter: MyAdapter
+    private lateinit var binding: ActivityGovtschemesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_govtschemes)
+        binding = ActivityGovtschemesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         //val dataModelList = DataModel.genDataModels(20)
         fetchData()
         myadapter = MyAdapter( this)
-        recycler_view.layoutManager = LinearLayoutManager(this)
-        recycler_view.adapter = myadapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter= myadapter
     }
 
     private fun fetchData() {

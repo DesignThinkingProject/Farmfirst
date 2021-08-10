@@ -1,5 +1,6 @@
 package com.example.farmfirst
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -13,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_request.NameEt
 
 private const val TAGLOG = "SignTag"
 
+
 class Request : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +22,8 @@ class Request : AppCompatActivity() {
 
         saveBtn.setOnClickListener {
             saveCropToFirebaseDatabase()
+            val i= Intent(this, Buysell::class.java)
+            startActivity(i)
         }
 
     }
