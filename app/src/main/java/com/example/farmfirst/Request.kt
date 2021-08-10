@@ -47,4 +47,4 @@ class Request : AppCompatActivity() {
     }
 
 }
-class Cropdetails(val name1: String, val location: String, val weight1: Int, val amount: Int, val note1: String, val date: String)
+data class Cropdetails(val name1: String?=null, val location: String?=null, val weight1: Int?=null, val amount: Int?=null, val note1: String?=null, val date: String?=null)
