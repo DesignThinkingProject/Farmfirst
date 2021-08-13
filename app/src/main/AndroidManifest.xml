@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmFirst"
         tools:targetApi="p">
-        <activity android:name=".Request"></activity>
+        <activity android:name=".ItemLabour"></activity>
+        <activity android:name=".LabourRequest" />
+        <activity android:name=".Request" />
         <activity
             android:name=".Buysell"
             android:theme="@style/Theme.FarmFirst.NoActionBar" />
