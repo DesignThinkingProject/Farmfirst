@@ -36,20 +36,50 @@
                 android:id="@+id/linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+<!--                <TextView-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:id="@+id/txtShowTitle"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="5dp"-->
+<!--                    android:layout_marginRight="0dp"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:maxLines="1"-->
+<!--                    tools:text="Wheat"-->
+<!--                    android:textColor="#303030"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
+
                 <TextView
-                    android:layout_weight="1"
                     android:id="@+id/txtShowTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_weight="1"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    tools:text="Wheat"
-                    android:textColor="#303030"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="Bhagwandas Sharma" />
 
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="340dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="80dp"
+                    tools:text="30000 /-"
+                    android:textColor="@color/litherGray"
+                    android:textSize="12sp" />
                 <TextView
                     android:layout_weight="1"
                     android:id="@+id/txtShowQuantity"
@@ -57,21 +87,9 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:maxLines="1"
+                    android:layout_marginLeft="340dp"
                     android:maxWidth="80dp"
                     tools:text="500 Mt"
-                    android:textColor="@color/litherGray"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/txtMoney"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textStyle="bold"
-                    android:maxWidth="80dp"
-                    tools:text="30000 /-"
                     android:textColor="@color/litherGray"
                     android:textSize="12sp" />
 
@@ -91,21 +109,7 @@
                     android:layout_marginTop="4dp"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    tools:text="Bhagwandas Sharma"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/txtphno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-
-                    android:layout_marginTop="4dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    tools:text="9618978903"
+                    tools:text="Wheat"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -205,7 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        tools:text="22:12 AM"
+                        tools:text="Phone"
                         android:textColor="@android:color/black"
                         android:visibility="visible" />
 

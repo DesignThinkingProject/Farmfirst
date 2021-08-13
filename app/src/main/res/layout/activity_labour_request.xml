@@ -90,37 +90,37 @@
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="4dp"
-            android:text="No. of Acers of land"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginBottom="4dp"-->
+<!--            android:text="No. of Acers of land"-->
+<!--            android:textColor="@color/colorAccent"-->
+<!--            android:textSize="16sp" />-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:id="@+id/titleacers1"
-            app:hintTextColor="@color/colorAccent"
-            app:boxStrokeColor="@color/colorAccent"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:id="@+id/titleacers1"-->
+<!--            app:hintTextColor="@color/colorAccent"-->
+<!--            app:boxStrokeColor="@color/colorAccent"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp">-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint=" "
-                android:paddingStart="8dp"
-                android:id="@+id/cropwtEt1"
-                android:inputType="textCapWords"
-                android:paddingEnd="8dp"
-                android:textSize="18sp" />
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Enter acres"-->
+<!--                android:paddingStart="8dp"-->
+<!--                android:id="@+id/cropwtEt1"-->
+<!--                android:inputType="textCapWords"-->
+<!--                android:paddingEnd="8dp"-->
+<!--                android:textSize="18sp" />-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint=""
+                android:hint="Enter days"
                 android:id="@+id/daysEt1"
                 android:paddingStart="8dp"
                 android:inputType="textCapWords"
@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="4dp"
-            android:text="What is to be done?"
+            android:text="Contact Number"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
@@ -178,8 +178,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Phone"
                 android:gravity="start"
-                android:hint=""
                 android:id="@+id/noteEt1"
                 android:lines="1"
                 android:paddingStart="8dp"
@@ -193,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="4dp"
-            android:text="Set date and time"
+            android:text="Set date"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
@@ -306,7 +306,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:text="PUT YOUR REQUEST"
-            android:id="@+id/saveBtn"
+            android:id="@+id/saveBtn1"
             app:backgroundTint="@color/colorAccent"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
