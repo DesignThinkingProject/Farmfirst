@@ -40,9 +40,9 @@ class LabourRequest : AppCompatActivity() {
             binding.NameEt1.text.toString(),
             binding.LocationEt1.text.toString(),
             binding.daysEt1.text.toString().toInt(),
-            binding.noteEt1.text.toString().toInt(),
-            binding.dateEt1.text.toString(),
-            binding.wageEt2.text.toString()
+            binding.wageEt2.text.toString().toInt(),
+            binding.noteEt1.text.toString(),
+            binding.dateEt1.text.toString()
         )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         ref1.child("$uid").setValue(labourdetail)
