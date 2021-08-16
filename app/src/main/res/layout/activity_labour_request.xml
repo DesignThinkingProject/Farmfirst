@@ -65,7 +65,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
-            android:text="Crop Location"
+            android:text="Field Location"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
@@ -178,7 +178,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Phone"
+                android:hint="Phone number"
                 android:gravity="start"
                 android:id="@+id/noteEt1"
                 android:lines="1"
@@ -254,7 +254,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
-            android:text="Wage to be paid to labour(per hour)"
+            android:text="Wage for the labour (per day)"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 

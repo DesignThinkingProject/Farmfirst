@@ -51,8 +51,10 @@ class MainActivity : AppCompatActivity() {
                     val mobileno = it.child("mobileno").value
                     var username = it.child("username").value
                     farmername = "$username"
-                    username = " Hi, $username \n Mobile no: $mobileno \n Location: $location"
-                    binding.detailsid.text = username.toString()
+                    //username = " Hi, $username \n Mobile no: $mobileno \n Location: $location"
+                    binding.userid.text = "Hi, $username"
+                    binding.locationid.text = "$location"
+                    binding.phoneid.text = "$mobileno"
 
                 }
                 else{

@@ -21,13 +21,13 @@ class MyLabourAdapter(private val detailslist: ArrayList<Labourdetails>) : Recyc
 
         val currentdetail =  detailslist[position]
 
-        holder.showTitle1.text = currentdetail.title
-        holder.showLocation1.text = currentdetail.location
-        holder.showCropName1.text = currentdetail.name1
-        holder.showDays1.text = currentdetail.days.toString()
-        holder.showMoney1.text = currentdetail.wage.toString()
-        holder.showPhone1.text = currentdetail.phone.toString()
-        holder.showDate1.text = currentdetail.date
+        holder.showTitle1.text = currentdetail.farmername
+        holder.showLocation1.text = "Place: " + currentdetail.location
+        holder.showCropName1.text = "Crop: " + currentdetail.name1
+        holder.showDays1.text = "Duration: " + currentdetail.days.toString() + " Days"
+        holder.showMoney1.text = "Wage: Rs " + currentdetail.wage.toString()
+        holder.showPhone1.text = "Contact: " + currentdetail.phone.toString()
+        holder.showDate1.text = "Date: " + currentdetail.date
     }
 
     override fun getItemCount(): Int {
