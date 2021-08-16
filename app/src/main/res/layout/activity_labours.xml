@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Labours">
+
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        app:titleTextColor="@android:color/white"-->
+<!--        app:title="BUY SELL PLATFORM"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_alignParentBottom="true"
         android:layout_margin="32dp"
@@ -15,7 +24,7 @@
         android:layout_height="wrap_content" />
     <androidx.recyclerview.widget.RecyclerView
 
-        android:id="@+id/listofrequests"
+        android:id="@+id/listofrequests1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_labour"/>

@@ -50,4 +50,4 @@ class LabourRequest : AppCompatActivity() {
 
 }
 data class Labourdetails(val name1: String?=null, val location: String?=null, val days: Int?=null,
-                         val wage: Int?=null, val phone: String?=null, val date : String?=null)
+                         val wage: Int?=null, val phone: String?=null, val date : String?=null, val title:String?=null)
