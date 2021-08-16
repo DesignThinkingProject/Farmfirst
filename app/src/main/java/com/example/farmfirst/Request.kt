@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.farmfirst.databinding.ActivityRequestBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
@@ -33,18 +34,26 @@ class Request : AppCompatActivity() {
     private fun saveCropToFirebaseDatabase() {
         val uid = FirebaseAuth.getInstance().uid
         val ref1 = FirebaseDatabase.getInstance().getReference("/cropsbuysell/")
-
+        val ref2 = FirebaseDatabase.getInstance().getReference("users")
+//
+//        if (uid != null) {
+//            ref2.child(uid).get().addOnSuccessListener {
+//                if (it.exists()) {
+//                    farmername = it.child("username").value
+//                }
+//            }
+//        }
         val cropdetail = Cropdetails(
+            farmername,
             binding.NameEt.text.toString(),
             binding.LocationEt.text.toString(),
             binding.cropwtEt.text.toString().toInt(),
             binding.priceamountEt.text.toString().toInt(),
-                binding.noteEt.text.toString(),
-                binding.dateEt.text.toString()
-            )
+            binding.noteEt.text.toString(),
+            binding.dateEt.text.toString()
+        )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         ref1.child("$uid").setValue(cropdetail)
     }
-
 }
-data class Cropdetails(val name1: String?=null, val location: String?=null, val weight1: Int?=null, val amount: Int?=null, val note1: String?=null, val date: String?=null)
+data class Cropdetails(val farmername: String?=null, val name1: String?=null, val location: String?=null, val weight1: Int?=null, val amount: Int?=null, val note1: String?=null, val date: String?=null)

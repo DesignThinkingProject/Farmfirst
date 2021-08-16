@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapterBuysell(private val detailslist :ArrayList<Cropdetails>) : RecyclerView.Adapter<MyAdapterBuysell.MyViewHolder>() {
+class MyAdapterBuysell(private val detailslist: ArrayList<Cropdetails>) : RecyclerView.Adapter<MyAdapterBuysell.MyViewHolder>() {
 
 
 
@@ -26,6 +26,7 @@ class MyAdapterBuysell(private val detailslist :ArrayList<Cropdetails>) : Recycl
         holder.showMoney.text = currentdetail.amount.toString()
         holder.showQuantity.text = currentdetail.weight1.toString()
         holder.showDate.text = currentdetail.date
+        holder.showName.text = currentdetail.farmername.toString()
     }
 
     override fun getItemCount(): Int {

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyLabourAdapter(private val detailslist :ArrayList<Labourdetails>) : RecyclerView.Adapter<MyLabourAdapter.MyViewHolder>() {
+class MyLabourAdapter(private val detailslist: ArrayList<Labourdetails>) : RecyclerView.Adapter<MyLabourAdapter.MyViewHolder>() {
 
 
 
@@ -21,11 +21,13 @@ class MyLabourAdapter(private val detailslist :ArrayList<Labourdetails>) : Recyc
 
         val currentdetail =  detailslist[position]
 
-        holder.showTitle.text = currentdetail.name1
-        holder.showLocation.text = currentdetail.location
-        holder.showMoney.text = currentdetail.amount.toString()
-        holder.showQuantity.text = currentdetail.weight1.toString()
-        holder.showDate.text = currentdetail.date
+        holder.showTitle1.text = currentdetail.farmername
+        holder.showLocation1.text = "Place: " + currentdetail.location
+        holder.showCropName1.text = "Crop: " + currentdetail.name1
+        holder.showDays1.text = "Duration: " + currentdetail.days.toString() + " Days"
+        holder.showMoney1.text = "Wage: Rs " + currentdetail.wage.toString()
+        holder.showPhone1.text = "Contact: " + currentdetail.phone.toString()
+        holder.showDate1.text = "Date: " + currentdetail.date
     }
 
     override fun getItemCount(): Int {
@@ -33,15 +35,13 @@ class MyLabourAdapter(private val detailslist :ArrayList<Labourdetails>) : Recyc
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val showTitle : TextView = itemView.findViewById(R.id.txtShowTitle)
-        val showQuantity : TextView = itemView.findViewById(R.id.txtShowQuantity)
-        val showMoney : TextView = itemView.findViewById(R.id.txtMoney)
-        val showName : TextView = itemView.findViewById(R.id.txtShowName)
-        val showLocation : TextView = itemView.findViewById(R.id.txtLocation)
-        val showDate : TextView = itemView.findViewById(R.id.txtShowDate)
-    }
 
-//    override fun onBindViewHolder(holder: MyAdapterBuysell.MyViewHolder, position: Int) {
-//        TODO("Not yet implemented")
-//    }
+        val showTitle1 : TextView = itemView.findViewById(R.id.txtShowTitle1)
+        val showDays1 : TextView = itemView.findViewById(R.id.txtDays1)
+        val showMoney1 : TextView = itemView.findViewById(R.id.txtMoney1)
+        val showPhone1 : TextView = itemView.findViewById(R.id.txtPhone1)
+        val showCropName1 : TextView = itemView.findViewById(R.id.txtShowCropName1)
+        val showLocation1 :TextView = itemView.findViewById(R.id.txtLocation1)
+        val showDate1 : TextView = itemView.findViewById(R.id.txtShowDate1)
+    }
 }

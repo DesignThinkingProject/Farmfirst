@@ -37,6 +37,7 @@ class LabourRequest : AppCompatActivity() {
         val ref1 = FirebaseDatabase.getInstance().getReference("/labourRequest/")
 
         val labourdetail = Labourdetails(
+            farmername,
             binding.NameEt1.text.toString(),
             binding.LocationEt1.text.toString(),
             binding.daysEt1.text.toString().toInt(),
@@ -49,5 +50,5 @@ class LabourRequest : AppCompatActivity() {
     }
 
 }
-data class Labourdetails(val name1: String?=null, val location: String?=null, val days: Int?=null,
-                         val wage: Int?=null, val phone: String?=null, val date : String?=null)
+data class Labourdetails(val farmername: String?=null, val name1: String?=null, val location: String?=null, val days: Int?=null,
+                         val wage: Int?=null, val phone: String?=null, val date : String?=null, val title:String?=null)

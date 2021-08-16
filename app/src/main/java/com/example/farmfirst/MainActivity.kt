@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 
-
+var farmername: String = ""
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dbRef : DatabaseReference
@@ -50,8 +50,11 @@ class MainActivity : AppCompatActivity() {
                     val location = it.child("location").value
                     val mobileno = it.child("mobileno").value
                     var username = it.child("username").value
-                    username = " Hi, $username \n Mobile no: $mobileno \n Location: $location"
-                    binding.detailsid.text = username.toString()
+                    farmername = "$username"
+                    //username = " Hi, $username \n Mobile no: $mobileno \n Location: $location"
+                    binding.userid.text = "Hi, $username"
+                    binding.locationid.text = "$location"
+                    binding.phoneid.text = "$mobileno"
 
                 }
                 else{
