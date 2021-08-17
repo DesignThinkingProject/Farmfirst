@@ -1,10 +1,16 @@
 package com.example.farmfirst
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.*
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -59,13 +65,23 @@ class Buysell : AppCompatActivity() {
                         startActivity(Intent(this@Buysell,Buysell::class.java))
                     }
                 } else if (direction == ItemTouchHelper.RIGHT) {
-                    GlobalScope.launch() {
 
-//                        dbRef = FirebaseDatabase.getInstance().getReference("cropsbuysell").child()
-//                        dbRef.removeValue();
-//                        startActivity(Intent(this@Buysell,Buysell::class.java))
+                    val perm:Int=ContextCompat.checkSelfPermission(this@Buysell, Manifest.permission.CALL_PHONE)
+                    if(perm == PackageManager.PERMISSION_GRANTED){
+                        val number = mylist[position].contact
+                        val intent= Intent()
+                        intent.action=Intent.ACTION_CALL
+                        intent.data= Uri.parse("tel:$number")
+                        startActivity(intent)
                     }
+                    else {
+                        //var pms:String=Manifest.permission.CALL_PHONE
+                        ActivityCompat.requestPermissions(this@Buysell, arrayOf(Manifest.permission.CALL_PHONE),200)
+                        val perm:Int= ContextCompat.checkSelfPermission(this@Buysell, Manifest.permission.CALL_PHONE)
+                    }
+
                 }
+                //startActivity(Intent(this@Buysell,Buysell::class.java))
             }
 
             override fun onChildDraw(
