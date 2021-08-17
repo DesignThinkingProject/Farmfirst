@@ -5,182 +5,232 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
+    android:layout_marginBottom="10dp"
     android:elevation="10dp"
-    android:layout_margin="10dp"
     app:cardCornerRadius="10dp">
-    <LinearLayout
+
+
+    <View
+        android:id="@+id/viewColorTag"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/l1"
-        android:orientation="vertical"
-        android:padding="10dp">
-        <LinearLayout
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/white"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l2">
-            <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop"
-                android:textSize="20dp"
-                android:text="Name">
-            </TextView>
-            <TextView
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--                <TextView-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:id="@+id/txtShowTitle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginEnd="5dp"-->
+                <!--                    android:layout_marginRight="0dp"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    tools:text="Wheat"-->
+                <!--                    android:textColor="#303030"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/txtShowName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="Bhagwandas Sharma"
+                    android:visibility="visible"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtShowQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="150dp"
+                    tools:text="500 mt"
+                    android:textSize="18sp" />
+                <!--                <TextView-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:id="@+id/txtDays1"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:maxWidth="150dp"-->
+                <!--                    tools:text="7 days"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    android:textSize="14sp" />-->
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="150dp"
+                    tools:text="30000 /-"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtShowName"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="Bhagawandas sharma">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear1"
+                android:id="@+id/linear2">
 
-            </TextView>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l4">
-            <TextView
+            </LinearLayout>
+            <LinearLayout
+
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop3"
-                android:textSize="20dp"
-                android:text="Crop">
-            </TextView>
-            <TextView
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear2"
+                android:id="@+id/linear3">
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtShowTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="Wheat"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="New Delhi"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@id/linear2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtShowTitle"
-                android:textSize="25dp"
-                android:text="Wheat"
-                android:textColor="@color/black">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            </TextView>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--<TextView
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l89">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop18"
-                android:textSize="20dp"
-                android:text="Location">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtLocation"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="New Delhi">
+                        android:id="@+id/textDate1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/linear2"
+                        android:layout_marginTop="15dp"
+                        android:text="Date"
+                        android:textColor="@color/litherGray"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        android:layout_marginStart="5sp"/>-->
 
-            </TextView>
+                    <TextView
+                        android:id="@+id/txtShowDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textDate"
+                        tools:text="22-12-2017"
+                        android:textColor="@android:color/black"
+                        android:visibility="visible"
+                        android:layout_marginTop="30sp"/>
+                </LinearLayout>
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l3">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop1"
-                android:textSize="20dp"
-                android:text="Amount">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtMoney"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="Rs 500">
+                    <!--<TextView
+                        android:id="@+id/textNumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtShowTask"
+                        android:layout_marginTop="15dp"
+                        android:text="Number"
+                        android:textColor="@color/litherGray"
+                        android:textSize="12sp"
+                        android:visibility="visible" />-->
 
-            </TextView>
+                    <TextView
+                        android:id="@+id/txtContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+                        android:visibility="visible"
+                        tools:text="Phone" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l6">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop6"
-                android:textSize="20dp"
-                android:text="Area">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtShowQuantity"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="5000 mt">
+                </LinearLayout>
 
-            </TextView>
+            </LinearLayout>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l8">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop9"
-                android:textSize="20dp"
-                android:text="Date">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtShowDate"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="5/6/21">
+        </RelativeLayout>
 
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/l9">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/crop0"
-                android:textSize="20dp"
-                android:text="Contact:">
-            </TextView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtShowTime"
-                android:textSize="25dp"
-                android:textColor="@color/black"
-                android:text="8178778282">
-
-            </TextView>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
+    </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>

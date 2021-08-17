@@ -50,10 +50,12 @@ class Request : AppCompatActivity() {
             binding.cropwtEt.text.toString().toInt(),
             binding.priceamountEt.text.toString().toInt(),
             binding.noteEt.text.toString(),
-            binding.dateEt.text.toString()
+            binding.dateEt.text.toString(),
+            binding.contactEt.text.toString()
+
         )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         ref1.child("$uid").setValue(cropdetail)
     }
 }
-data class Cropdetails(val farmername: String?=null, val name1: String?=null, val location: String?=null, val weight1: Int?=null, val amount: Int?=null, val note1: String?=null, val date: String?=null)
+data class Cropdetails(val farmername: String?=null, val name1: String?=null, val location: String?=null, val weight1: Int?=null, val amount: Int?=null, val note1: String?=null, val date: String?=null, val contact: String?=null)

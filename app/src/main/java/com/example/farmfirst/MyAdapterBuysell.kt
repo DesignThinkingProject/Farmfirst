@@ -12,7 +12,7 @@ class MyAdapterBuysell(private val detailslist: ArrayList<Cropdetails>) : Recycl
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_buysell
-        ,parent,false)
+            ,parent,false)
         return MyViewHolder(itemView)
 
     }
@@ -21,12 +21,13 @@ class MyAdapterBuysell(private val detailslist: ArrayList<Cropdetails>) : Recycl
 
         val currentdetail =  detailslist[position]
 
-        holder.showTitle.text = currentdetail.name1
-        holder.showLocation.text = currentdetail.location
-        holder.showMoney.text = currentdetail.amount.toString()
-        holder.showQuantity.text = currentdetail.weight1.toString()
-        holder.showDate.text = currentdetail.date
+        holder.showTitle.text = "Crop :"+currentdetail.name1
+        holder.showLocation.text = "Place :"+currentdetail.location
+        holder.showMoney.text = "Amount Rs:"+currentdetail.amount.toString()
+        holder.showQuantity.text = "Area :"+currentdetail.weight1.toString()
+        holder.showDate.text = "Date :"+currentdetail.date
         holder.showName.text = currentdetail.farmername.toString()
+        holder.showContact.text= "Contact :"+currentdetail.contact.toString()
     }
 
     override fun getItemCount(): Int {
@@ -40,5 +41,6 @@ class MyAdapterBuysell(private val detailslist: ArrayList<Cropdetails>) : Recycl
         val showName : TextView = itemView.findViewById(R.id.txtShowName)
         val showLocation :TextView = itemView.findViewById(R.id.txtLocation)
         val showDate : TextView = itemView.findViewById(R.id.txtShowDate)
+        val showContact : TextView= itemView.findViewById(R.id.txtContact)
     }
 }

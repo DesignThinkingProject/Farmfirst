@@ -26,7 +26,7 @@ class MyLabourAdapter(private val detailslist: ArrayList<Labourdetails>) : Recyc
         holder.showCropName1.text = "Crop: " + currentdetail.name1
         holder.showDays1.text = "Duration: " + currentdetail.days.toString() + " Days"
         holder.showMoney1.text = "Wage: Rs " + currentdetail.wage.toString()
-        holder.showPhone1.text = "Contact: " + currentdetail.phone.toString()
+        holder.showPhone1.text = "Contact "+currentdetail.phone.toString()
         holder.showDate1.text = "Date: " + currentdetail.date
     }
 
@@ -43,5 +43,6 @@ class MyLabourAdapter(private val detailslist: ArrayList<Labourdetails>) : Recyc
         val showCropName1 : TextView = itemView.findViewById(R.id.txtShowCropName1)
         val showLocation1 :TextView = itemView.findViewById(R.id.txtLocation1)
         val showDate1 : TextView = itemView.findViewById(R.id.txtShowDate1)
+
     }
 }

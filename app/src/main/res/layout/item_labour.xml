@@ -38,19 +38,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-<!--                <TextView-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:id="@+id/txtShowTitle"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginEnd="5dp"-->
-<!--                    android:layout_marginRight="0dp"-->
-<!--                    android:ellipsize="end"-->
-<!--                    android:maxLines="1"-->
-<!--                    tools:text="Wheat"-->
-<!--                    android:textColor="#303030"-->
-<!--                    android:textSize="20sp"-->
-<!--                    android:textStyle="bold" />-->
+                <!--                <TextView-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:id="@+id/txtShowTitle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginEnd="5dp"-->
+                <!--                    android:layout_marginRight="0dp"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    tools:text="Wheat"-->
+                <!--                    android:textColor="#303030"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    android:textStyle="bold" />-->
 
                 <TextView
                     android:id="@+id/txtShowTitle1"
@@ -64,7 +64,7 @@
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     tools:text="Bhagwandas Sharma"
                     android:visibility="visible"
@@ -96,6 +96,19 @@
                     tools:text="7 days"
                     android:textStyle="bold"
                     android:textSize="14sp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txtLocation1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="New Delhi"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    />
 
             </LinearLayout>
             <LinearLayout
@@ -128,19 +141,31 @@
                     tools:text="Wheat"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
-                <TextView
-                    android:layout_weight="1"
-                    android:id="@+id/txtLocation1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="4dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    tools:text="New Delhi"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    />
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_marginRight="160dp"-->
+                <!--                    android:layout_marginTop="4dp"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    android:text="Contact">-->
+                <!--                </TextView>-->
+                <!--                <TextView-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:id="@+id/txtLocation1"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentStart="true"-->
+                <!--                    android:layout_marginTop="4dp"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    tools:text="New Delhi"-->
+                <!--                    android:textColor="@android:color/black"-->
+                <!--                    android:textSize="16sp"-->
+                <!--                    />-->
 
             </LinearLayout>
 
@@ -188,16 +213,16 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <!--<TextView
-                        android:id="@+id/textNumber1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtShowTask"
-                        android:layout_marginTop="15dp"
-                        android:text="Number"
-                        android:textColor="@color/litherGray"
-                        android:textSize="12sp"
-                        android:visibility="visible" />-->
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textNumber1"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@+id/txtShowTask"-->
+                    <!--                        android:layout_marginTop="15dp"-->
+                    <!--                        android:text="Number"-->
+                    <!--                        android:textColor="@color/litherGray"-->
+                    <!--                        android:textSize="12sp"-->
+                    <!--                        android:visibility="visible" />-->
 
                     <TextView
                         android:id="@+id/txtPhone1"
